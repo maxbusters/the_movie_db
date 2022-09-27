@@ -53,7 +53,7 @@
       </div>
     </b-row>
     <div class="text-center p-4 footer__copy">
-      © 2021 Copyright:
+      © {{currYear}} Copyright:
       <a
         class="fw-bold footer__link"
         href="https://maxbusters.github.io/homework/01/"
@@ -71,6 +71,11 @@ export default {
       logo: config.FOOTER_LOGO,
     };
   },
+  computed: {
+    currYear(){
+      return new Date().getFullYear();
+    }
+  }
 };
 </script>
 
